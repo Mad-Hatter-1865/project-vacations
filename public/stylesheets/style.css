@@ -1,8 +1,46 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url('https://i.imgur.com/2baaUTS.jpg');
+  background-size: cover;
 }
 
 a {
-  color: #00B7FF;
+  color: white;
 }
+
+
+nav {
+  grid-area: nav;
+  background-color: purple;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 30px;
+  border-style: solid;
+  border-color: yellow;
+}
+
+nav > a {
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: right;
+}
+
+
+
+
+nav > h1 {
+  color: white;
+}
+
+#home-page {
+  border-style: solid;
+  margin-top: 65px;
+  height: 300px;
+  border-color: yellow;
+  background-color: purple;
+}
+
+

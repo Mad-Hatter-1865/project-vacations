@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+<body>
+    <nav>
+        <h1>Cool Vacation Log Title</h1>
+          <a href="/users" class="home">Home Page</a>
+              <% if (user) { %>
+                  <a href="">My Vacations</a>
+                  <a href="/logout"><i class="log"></i>Log Out</a>
+              <% } else { %>
+                  <a href="/auth/google"><i class="log"></i>Login</a>
+              <% } %>
+      </nav>
+      <main id="home-page">
+          <h1></h1>
+      </main>
+
+</body>
+</html>
