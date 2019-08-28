@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Vacations</title>
+    <link rel='stylesheet' href='stylesheets/style.css' />
+</head>
+<body>
+    <nav>
+        <h1>Cool Vacation Log Title</h1>
+          <a href="/users" class="home">Home Page</a>
+          <a href="/vacations/new">Add New Vacation</a>
+    </nav>
+
+    <main id="vacations-page">
+        <h1>My Vacations</h1>
+            <table>
+                <tbody>
+                    <% vacations.forEach(function(v) { %>
+                        <tr>
+                            <td><%= v.title %></td>
+                            <td>
+                                 <a href="/vacations/<%= v._id %>">View</a>
+                            </td>
+                        </tr>
+                   <% }) %>
+                </tbody>
+            </table>
+    </main>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= vacation.title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <nav>
+        <h1></h1>
+        <a href="/users" class="home">Home Page</a>
+        <a href="/vacations">My Vacations</a>
+    </nav>
+
+    <main id="view-pg">
+        <h1>Vacation: <%= vacation.title %></h1>
+        <h2>Description:</h2>
+        <p><%= vacation.description %></p>
+        <br><br><h2>Destinations</h2>
+        <table>
+            <tbody>
+                    <% vacation.destinations.forEach(function(d) { %>
+                        <tr>
+                          <td><%= d.desnam %></td>
+                        </tr>
+                      <% }); %>
+            </tbody>
+        </table>
+
+        <form id="add-destination-form" method="POST" action="/vacations/<%= vacation._id %>/destinations">
+            <label>Destination Name:</label>
+            <input type="text" name="desnam">
+            <label>Destination Description</label>
+            <textarea name="des"></textarea>
+            <input type="submit" value="Add Destination">
+        </form>
+
+    </main>
+</body>
+</html>

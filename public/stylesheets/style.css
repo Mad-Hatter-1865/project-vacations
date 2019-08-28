@@ -43,4 +43,40 @@ nav > h1 {
   background-color: purple;
 }
 
+#vacations-page {
+  border-style: solid;
+  margin-top: 65px;
+  border-color: yellow;
+  height: 300px;
+  background-color: purple;
+}
+
+#vacations-page > h1 {
+  color: white;
+}
+
+#add-vac {
+  border-style: solid;
+  border-color: yellow;
+  background-color: purple;
+  height: 300px;
+}
+
+#add-vac > h2 {
+  color: white;
+}
+
+tr {
+  color: white;
+}
+
+#view-pg {
+  border-style: solid;
+  border-color: yellow;
+  background-color: purple;
+}
+
+#view-pg > h1 {
+  color: white;
+}
 
