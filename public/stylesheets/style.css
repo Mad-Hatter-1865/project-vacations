@@ -76,7 +76,17 @@ tr {
   background-color: purple;
 }
 
-#view-pg > h1 {
+#view-pg > h1,h2,p {
+  color: white;
+}
+
+#edit-pg {
+  border-style: solid;
+  border-color: yellow;
+  background-color: purple;
+}
+
+#edit-pg > h1{
   color: white;
 }
 

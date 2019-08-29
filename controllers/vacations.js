@@ -4,8 +4,23 @@ module.exports = {
     index,
     new: newVacation,
     create,
-    show
+    show,
+    delete: deleteVacation,
+    update,
+    edit
 };
+
+function edit(req,res) {
+  Vacation.findById(req.params.id, function(err, vacation) {
+    res.render('vacations/edit', {vacation});
+  });
+}
+
+function update(req,res) {
+  Vacation.findByIdAndUpdate(req.params.id, req.body,function(err,vacation) {
+    res.redirect(`/vacations/${vacation._id}`);
+  });
+}
 
 function show(req,res) {
   Vacation.findById(req.params.id, function(err, vacation) {
@@ -29,6 +44,13 @@ function create(req,res) {
     // one way to handle errors
     if (err) return res.render('vacations/new');
     console.log(vacation);
+    res.redirect('/vacations');
+  });
+}
+
+function deleteVacation(req, res) {
+  Vacation.findByIdAndDelete(req.params.id, function(err, vacation){
+    if (err) return res.redirect('/vacations');
     res.redirect('/vacations');
   });
 }

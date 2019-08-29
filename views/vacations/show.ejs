@@ -12,10 +12,14 @@
         <h1></h1>
         <a href="/users" class="home">Home Page</a>
         <a href="/vacations">My Vacations</a>
+        <a href="/vacations/<%= vacation._id%>/edit">Edit Vacation</a>
     </nav>
 
     <main id="view-pg">
         <h1>Vacation: <%= vacation.title %></h1>
+        <form id="delete-vacation-form" method="POST" action="/vacations/<%= vacation._id %>?_method=DELETE">
+            <button type="submit">Delete Vacation</button>
+        </form>
         <h2>Description:</h2>
         <p><%= vacation.description %></p>
         <br><br><h2>Destinations</h2>
