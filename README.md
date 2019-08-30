@@ -3,7 +3,10 @@
 ### Description
 
 ## Screenshots
-Screenshots go here
+![Wireframe](https://i.imgur.com/EJT7abC.png)
+![Wireframe](https://i.imgur.com/HstAdVX.png)
+![Wireframe](https://i.imgur.com/tfdpM7S.png)
+![Wireframe](https://i.imgur.com/S7ACYN4.png)
 
 ## Technologies Used
 - CSS
