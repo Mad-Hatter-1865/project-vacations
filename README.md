@@ -1,6 +1,6 @@
 # Vaction App
 
-### Description
+## Description
 
 ## Screenshots
 ![Wireframe](https://i.imgur.com/EJT7abC.png)
