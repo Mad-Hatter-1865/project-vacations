@@ -38,9 +38,14 @@ nav > h1 {
 #home-page {
   border-style: solid;
   margin-top: 65px;
-  height: 300px;
+  height: 500px;
   border-color: yellow;
   background-color: purple;
+  overflow: scroll;
+}
+
+#home-page > h1,p {
+  color: white;
 }
 
 #vacations-page {
@@ -51,9 +56,10 @@ nav > h1 {
   background-color: purple;
 }
 
-#vacations-page > h1 {
+#vacations-page > h1,h3 {
   color: white;
 }
+
 
 #add-vac {
   border-style: solid;
@@ -76,8 +82,14 @@ tr {
   background-color: purple;
 }
 
-#view-pg > h1,h2,p {
+#view-pg > h1,h2 {
   color: white;
+}
+
+#view-pg > p {
+  color: white;
+  word-wrap: break-word;
+  width: 450px;
 }
 
 #edit-pg {
@@ -87,6 +99,33 @@ tr {
 }
 
 #edit-pg > h1{
+  color: white;
+}
+
+#pic-pg {
+  border-style: solid;
+  border-color: yellow;
+  background-color: purple;
+}
+
+#pic-pg > h1 {
+  color: white;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+hr {
+  border-color: yellow;
+}
+
+#delete-vacation-form {
+  display: inline;
+}
+
+li {
   color: white;
 }
 

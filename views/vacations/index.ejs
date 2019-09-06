@@ -16,7 +16,10 @@
 
     <main id="vacations-page">
         <h1>My Vacations</h1>
-            <table>
+        <% if(vacations.length < 1) { %>
+            <h3>You have not documented any vacations yet.</h3>
+       <% } else { %>
+        <table>
                 <tbody>
                     <% vacations.forEach(function(v) { %>
                         <tr>
@@ -28,6 +31,8 @@
                    <% }) %>
                 </tbody>
             </table>
+    <% } %>
+            
     </main>
 </body>
 </html>

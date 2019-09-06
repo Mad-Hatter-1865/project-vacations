@@ -10,6 +10,7 @@ module.exports = {
     edit
 };
 
+
 function edit(req,res) {
   Vacation.findById(req.params.id, function(err, vacation) {
     res.render('vacations/edit', {vacation});

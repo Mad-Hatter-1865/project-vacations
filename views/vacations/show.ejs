@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav>
-        <h1></h1>
+        <h1>Neon Vacation Log</h1>
         <a href="/users" class="home">Home Page</a>
         <a href="/vacations">My Vacations</a>
         <a href="/vacations/<%= vacation._id%>/edit">Edit Vacation</a>
@@ -21,25 +21,52 @@
             <button type="submit">Delete Vacation</button>
         </form>
         <h2>Description:</h2>
-        <p><%= vacation.description %></p>
-        <br><br><h2>Destinations</h2>
+            <p><%= vacation.description %></p>
+            <hr>
+        <br><h2>Destinations</h2>
         <table>
             <tbody>
                     <% vacation.destinations.forEach(function(d) { %>
                         <tr>
-                          <td><%= d.desnam %>  -  <%=d.des %></td>
+                          <td><%= d.desnam %>  :</td>
+                        </tr>
+                        <tr>
+                            <td>
+                             <p><%=d.des %></p>
+                            </td>
                         </tr>
                       <% }); %>
             </tbody>
         </table>
+        <br>
+        <br>
 
         <form id="add-destination-form" method="POST" action="/vacations/<%= vacation._id %>/destinations">
             <label>Destination Name:</label>
             <input type="text" name="desnam">
+            <br>
             <label>Destination Description</label>
             <textarea name="des"></textarea>
+            <br>
             <input type="submit" value="Add Destination">
         </form>
+
+        <hr>
+
+        <h2>Pictures:</h2>
+        <% if(vacation.piclinks.length < 1) { %>
+            <h3>You have not posted any pictures yet.</h3>
+        <% } else { %>
+            <% vacation.piclinks.forEach(function(p){ %>
+                <img src="<%= p.picture %>">
+            <% }); %>
+      <%  } %>
+
+      <form id="add-picture-form" method="POST" action="/vacations/<%= vacation._id %>/piclinks">
+            <label>Link to Image:</label>
+            <input type="text" name="picture">
+            <input type="submit" value="Add Picture">
+      </form>
 
     </main>
 </body>
